@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  server:
+    container_name: flask
+    build: 
+      context: .
+      dockerfile: ./Dockerfile
+    env_file:
+      - secrets.env
+    ports:
+      - 8000:8000

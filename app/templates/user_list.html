@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %} 
+    Users 
+{% endblock %}
+
+
+{% block content %}
+    
+        <a href={{ url_for('main.index') }}>Назад</a>
+        <p></p>
+        {% for user in user_list %}
+        <p>{{user.user_name}}</p>
+        {% endfor %}
+        
+    
+{% endblock %}
